@@ -1,11 +1,11 @@
 # E05b-Physics
-Exploring 2D physics and collisions.
 
-In *main1.py*, you will need to apply gravity to the balls on the screen. To do so, you will need to find an appropriate gravity constant and assign GRAVITY to that number (line 17). Because of the way the Y axis works in Python Arcade, GRAVITY will need to be a negative number for the balls to fall.
+main1 simply simulates some gravity with the balls. The gravity scaler is something I chose at random. 
+The balls should spawn randomly on the screen, fall towards the bottom, and then stop.
 
-You will then need to accelerate the balls according to the GRAVITY constant. You can call b.accelerate(x,y) on line 67. In the case of applying gravity, x will be 0 and y will be GRAVITY.
+main2 is this, but the balls now bounce off of the edge of the screen. There is a friction force
+in place, so the bounces should be less and less every time, eventually stopping at the bottom.
 
-*main2.py*, is a little more complicated. You will need to apply all the lessons you learned in main1.py, but now we want the balls to bounce off the walls. First apply the GRAVITY constant from main1.py and accelerate the balls. Then, lines 39, 45, 51, and 57 will ask you to bounce (reverse the velocity) of the ball when it hits a wall. Think about what we discussed in class. I am applying some friction so they don't bounce forever. *I added a margin to the wall to handle fast-moving balls. SCREENWIDTH - MARGIN would represent the right side of the window, for example.*
-
-*main3.py* is an opportunity for you to implement elastic collisions using the conservation of momentum. Assuming the animals are the same mass, they will just trade velocities. Insert your collision code at line 53. *For extra credit,* give each animal a random mass and use that to calculate the new velocities (remember that m1v1 = m2v2).
-
+main3 consists of 5 sprites, each given a random spawn, velocity, and mass. They bounce off of the edges of the screen, and 
+when they collide with one another, their momentum swaps. This means their velocty could end up being faster or slower, but it
+will change when it collides with another sprite.
